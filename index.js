@@ -24,6 +24,6 @@ app.use(morgan("common"));
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
 
-app.listen(3000, ()=>{
+app.listen(4000, ()=>{
     console.log('server running ');
 })
