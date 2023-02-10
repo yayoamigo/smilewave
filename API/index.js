@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(morgan("common"));
 
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/posts", postRoute);
 
 app.listen(4000, ()=>{
     console.log('server running ');
